@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="ErpInventoryApi/ErpInventoryApi.csproj" />
+  <Project Path="ERPInventoryApi.API/ERPInventoryApi.API.csproj" Id="655b2140-3980-44bf-9bbd-1eba183614a7" />
+  <Project Path="ERPInventoryApi.Application/ERPInventoryApi.Application.csproj" Id="56cd33d6-a1b7-4977-b11b-e47958c59bb5" />
+  <Project Path="ERPInventoryApi.Domain/ERPInventoryApi.Domain.csproj" Id="d9ffb244-2d71-4daa-b134-76d7b0a7c550" />
+  <Project Path="ERPInventoryApi.Infrastructure/ERPInventoryApi.Infrastructure.csproj" Id="b03c5328-2e18-4344-bdce-262b61551cf1" />
 </Solution>
