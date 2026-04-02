@@ -47,10 +47,10 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build ErpInventoryApi/ERPInventoryApi.sln --no-restore --configuration Release
+      run: dotnet build ErpInventoryApi/ErpInventoryApi.sln --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test ErpInventoryApi/ERPInventoryApi.sln --no-build --configuration Release --verbosity normal
+      run: dotnet test ErpInventoryApi/ErpInventoryApi.sln --no-build --configuration Release --verbosity normal
       env:
         ConnectionStrings__DefaultConnection: "Host=localhost;Database=erp_test;Username=postgres;Password=postgres"
         ConnectionStrings__Redis: "localhost:6379"
