@@ -25,7 +25,7 @@ public class AppDbContext : DbContext
 
         // Product config
         modelBuilder.Entity<Product>(entity =>
-        {
+        {   
             entity.HasKey(p => p.ID);
             entity.Property(p => p.Name).IsRequired().HasMaxLength(200);
             entity.Property(p => p.SKU).IsRequired().HasMaxLength(50);

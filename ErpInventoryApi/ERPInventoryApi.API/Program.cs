@@ -1,4 +1,6 @@
+using ERPInventoryApi.Application.Interfaces;
 using ERPInventoryApi.Infrastructure.Data;
+using ERPInventoryApi.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
@@ -27,6 +29,11 @@ try
     // PostgreSQL + EF Core
     builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+    // Dependency Injection for Repositories
+    builder.Services.AddScoped<IProductRepository, ProductRepository>();
+    builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+    builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>();
 
     // Health checks
     builder.Services.AddHealthChecks()
