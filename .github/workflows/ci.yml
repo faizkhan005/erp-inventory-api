@@ -44,7 +44,7 @@ jobs:
         dotnet-version: '10.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ErpInventoryApi/ErpInventoryApi.slnx
+      run: dotnet restore ErpInventoryApi/
 
     - name: Build
       run: dotnet build ErpInventoryApi/ErpInventoryApi.slnx --no-restore --configuration Release
